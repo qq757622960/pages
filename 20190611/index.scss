@@ -1,0 +1,106 @@
+@import './_collapse.scss';
+@import './_loading.scss';
+@import './_variable.scss';
+@import './_nodata.scss';
+
+.ys-show {
+    display: block !important;
+}
+
+.ys-wrapper {
+    margin: 50px 0;
+}
+
+.ys-inner {
+    border: 1px solid #f2f2f2;
+    border-top: none;
+}
+
+// 列表通用容器
+.ys-list-wrapper {
+    position: relative;
+    min-height: 650px;
+
+    .layui-elem-quote {
+        font-size: 16px;
+        font-weight: 200;
+        text-align: center;
+        margin-bottom: 0;
+        border-left: none;
+        border-radius: 0 0 0 0;
+    }
+}
+
+// 头部标题
+.ys-friend-wrapper {
+    .layui-elem-quote {
+        border-top: 5px solid #5FB878;
+    }
+}
+
+// 最近联系人
+.ys-history-wrapper {
+    display: none;
+
+    .layui-elem-quote {
+        border-top: 5px solid #FFB800;
+    }
+}
+
+// 时间范围
+.ys-day-wrapper {
+    display: none;
+
+    .layui-elem-quote {
+        border-top: 5px solid #FF5722;
+    }
+}
+
+// 聊天记录
+.ys-chat-wrapper {
+    display: none;
+
+    .layui-elem-quote {
+        border-top: 5px solid #393D49;
+    }
+}
+
+// 设置列表高度
+.layui-layim-list,
+.day-list {
+    height: $list-height;
+    padding: 20px 0;
+    overflow-y: auto;
+    border-right: 1px solid #f2f2f2;
+}
+
+.day-list {
+    li {
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+        cursor: pointer;
+        border-bottom: 1px solid #F0F0F0;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}
+
+// 好友列表项设置下边距
+.layui-layim-list li {
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// 选择样式
+.layui-layim-list,
+.day-list {
+    li.ys-this {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+}

@@ -1,0 +1,20 @@
+/** 
+ * @Author: YISHI 
+ * @Date: 2019-06-13 21:56:53 
+ * @Desc: 暂无数据 
+ */
+
+
+.no-data {
+    // display: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    p {
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #999;
+    }
+}

@@ -1,0 +1,17 @@
+/** 
+ * @Author: YISHI 
+ * @Date: 2019-06-13 16:16:36 
+ * @Desc: 折叠面板模板 
+ */
+
+.ys-collapse {
+    .ys-coll-title {
+        font-size: 14px;
+        .layui-icon {
+            color: #e2e2e2;
+        }
+    }
+    .ys-coll-content {
+        padding: 20px;
+    }
+}

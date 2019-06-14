@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/**  @Author: YISHI  @Date: 2019-06-13 16:16:36  @Desc: 折叠面板模板  */
+.ys-collapse .ys-coll-title { font-size: 14px; }
+.ys-collapse .ys-coll-title .layui-icon { color: #e2e2e2; }
+.ys-collapse .ys-coll-content { padding: 20px; }
+
+/**  @Author: YISHI  @Date: 2019-06-13 17:19:28  @Desc: 正在加载...  */
+.loading-container { display: none; position: absolute; width: 100%; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.loading-container .loading { width: 100%; text-align: center; }
+.loading-container .desc { line-height: 20px; font-size: 12px; color: #999; }
+
+/**  @Author: YISHI  @Date: 2019-06-13 17:50:05  @Desc: 变量集合  */
+/**  @Author: YISHI  @Date: 2019-06-13 21:56:53  @Desc: 暂无数据  */
+.no-data { position: absolute; width: 100%; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.no-data p { text-align: center; line-height: 20px; font-size: 12px; color: #999; }
+
+.ys-show { display: block !important; }
+
+.ys-wrapper { margin: 50px 0; }
+
+.ys-inner { border: 1px solid #f2f2f2; border-top: none; }
+
+.ys-list-wrapper { position: relative; min-height: 650px; }
+.ys-list-wrapper .layui-elem-quote { font-size: 16px; font-weight: 200; text-align: center; margin-bottom: 0; border-left: none; border-radius: 0 0 0 0; }
+
+.ys-friend-wrapper .layui-elem-quote { border-top: 5px solid #5FB878; }
+
+.ys-history-wrapper { display: none; }
+.ys-history-wrapper .layui-elem-quote { border-top: 5px solid #FFB800; }
+
+.ys-day-wrapper { display: none; }
+.ys-day-wrapper .layui-elem-quote { border-top: 5px solid #FF5722; }
+
+.ys-chat-wrapper { display: none; }
+.ys-chat-wrapper .layui-elem-quote { border-top: 5px solid #393D49; }
+
+.layui-layim-list, .day-list { height: 550px; padding: 20px 0; overflow-y: auto; border-right: 1px solid #f2f2f2; }
+
+.day-list li { height: 52px; line-height: 52px; text-align: center; cursor: pointer; border-bottom: 1px solid #F0F0F0; }
+.day-list li:hover { background-color: rgba(0, 0, 0, 0.05); }
+
+.layui-layim-list li { margin-bottom: 10px; }
+.layui-layim-list li:last-child { margin-bottom: 0; }
+
+.layui-layim-list li.ys-this, .day-list li.ys-this { background-color: rgba(0, 0, 0, 0.05); }

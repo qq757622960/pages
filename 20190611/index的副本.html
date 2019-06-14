@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layim/src/css/layui.css" />
+    <link rel="stylesheet" href="./layim/src/css/modules/layim/layim.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    
+    <div class="layui-fluid ys-wrapper">
+        <div class="layui-row ys-inner">
+            <!-- 顾问列表 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-friend-wrapper">
+                <blockquote class="layui-elem-quote">顾问列表</blockquote>
+                <ul class="layui-layim-list" ys-filter="friendList">
+                    <li ys-event="friend" data-id="10000">
+                        <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" />
+                        <span>贤心</span>
+                        <p>这些都是测试数据，实际使用请严格按照该格式返回</p>
+                    </li>
+                    <li ys-event="friend" data-id="10001">
+                        <img src="https://tva4.sinaimg.cn/crop.0.1.1125.1125.180/475bb144jw8f9nwebnuhkj20v90vbwh9.jpg" />
+                        <span>刘小涛</span>
+                        <p>如约而至，不负姊妹欢乐颂</p>
+                    </li>
+                    <li ys-event="friend" data-id="10000">
+                        <img src="https://tva2.sinaimg.cn/crop.0.8.751.751.180/961a9be5jw8fczq7q98i7j20kv0lcwfn.jpg" />
+                        <span>贤心</span>
+                        <p>这些都是测试数据，实际使用请严格按照该格式返回</p>
+                    </li>
+                    <li ys-event="friend" data-id="10001">
+                        <img src="https://tva3.sinaimg.cn/crop.0.0.750.750.180/5033b6dbjw8etqysyifpkj20ku0kuwfw.jpg" />
+                        <span>刘小涛</span>
+                        <p>如约而至，不负姊妹欢乐颂</p>
+                    </li>
+                </ul>
+                <div class="loading-container">
+                    <div class="loading">
+                        <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                        <p class="desc">正在加载...</p>
+                    </div>
+                </div>
+                <div class="no-data">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+            <!-- 顾问列表 E -->
+
+            <!-- 最近联系人 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-history-wrapper" ys-filter="historyList">
+                <blockquote class="layui-elem-quote">最近联系人列表</blockquote>
+                <ul class="layui-layim-list layim-list-history">
+                    <li ys-event="history" data-id="10000">
+                        <img src="https://tva2.sinaimg.cn/crop.0.8.751.751.180/961a9be5jw8fczq7q98i7j20kv0lcwfn.jpg" />
+                        <span>贤心</span>
+                        <p>这些都是测试数据，实际使用请严格按照该格式返回</p>
+                    </li>
+                    <li ys-event="history" data-id="10001">
+                        <img src="https://tva3.sinaimg.cn/crop.0.0.750.750.180/5033b6dbjw8etqysyifpkj20ku0kuwfw.jpg" />
+                        <span>刘小涛</span>
+                        <p>如约而至，不负姊妹欢乐颂</p>
+                    </li>
+                    <li ys-event="history" data-id="10000">
+                        <img src="https://tva2.sinaimg.cn/crop.0.8.751.751.180/961a9be5jw8fczq7q98i7j20kv0lcwfn.jpg" />
+                        <span>贤心</span>
+                        <p>这些都是测试数据，实际使用请严格按照该格式返回</p>
+                    </li>
+                    <li ys-event="history" data-id="10001">
+                        <img src="https://tva3.sinaimg.cn/crop.0.0.750.750.180/5033b6dbjw8etqysyifpkj20ku0kuwfw.jpg" />
+                        <span>刘小涛</span>
+                        <p>如约而至，不负姊妹欢乐颂</p>
+                    </li>
+                </ul>
+                <div class="loading-container">
+                    <div class="loading">
+                        <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                        <p class="desc">正在加载...</p>
+                    </div>
+                </div>
+                <div class="no-data">
+                    <p>暂无数据</p>
+                </div>
+            </div>
+            <!-- 最近联系人 E -->
+
+            <!-- 时间范围 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-day-wrapper" ys-filter="dayList">
+                <blockquote class="layui-elem-quote">时间范围</blockquote>
+                <ul class="day-list">
+                    <li ys-event="day">最近7天</li>
+                    <li ys-event="day">最近30天</li>
+                    <li ys-event="day">
+                        <div class="ys-collapse">
+                            <h2 class="ys-coll-title">
+                                自定义时间
+                            </h2>
+                            <div class="ys-coll-content">
+                                <input type="text" class="layui-input" id="customDate" placeholder="请选择时间范围" readonly />
+                                <button ys-event="dayCustom" type="button" class="layui-btn layui-btn-fluid layui-btn-disabled" ys-filter="dayCustom">确定</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 时间范围 E -->
+
+            <!-- 聊天记录 S -->
+            <div class="layui-col-md6 ys-list-wrapper ys-chat-wrapper" ys-filter="chatRecord">
+                <blockquote class="layui-elem-quote">聊天记录</blockquote>
+                <div class="layim-chat-main">
+                    <ul id="LAY_view">
+                        <li class="layim-chat-mine">
+                            <div class="layim-chat-user">
+                                <img src="https://tva3.sinaimg.cn/crop.0.0.512.512.180/8693225ajw8f2rt20ptykj20e80e8weu.jpg" />
+                                <cite><i>2016-12-05 08:31:22</i>纸飞机</cite>
+                            </div>
+                            <div class="layim-chat-text">
+                                你好啊小美女
+                            </div>
+                        </li>
+                        <li>
+                            <div class="layim-chat-user"><img src="https://tva3.sinaimg.cn/crop.0.0.512.512.180/8693225ajw8f2rt20ptykj20e80e8weu.jpg">
+                                <cite>Z_子晴<i>2016-12-05 08:31:32</i></cite>
+                            </div>
+                            <div class="layim-chat-text">
+                                你没发错吧？
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="loading-container">
+                        <div class="loading">
+                            <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                            <p class="desc">正在加载...</p>
+                        </div>
+                    </div>
+                    <div class="no-data">
+                        <p>暂无数据</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 聊天记录 E -->
+        </div>
+    </div>
+
+    <script src="./layim/src/layui.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

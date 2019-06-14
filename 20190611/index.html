@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./layim/src/css/layui.css" />
+    <link rel="stylesheet" href="./layim/src/css/modules/layim/layim.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+    
+    <div class="layui-fluid ys-wrapper">
+        <div class="layui-row ys-inner">
+            <!-- 顾问列表 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-friend-wrapper" id="ys-friend">
+                <blockquote class="layui-elem-quote">顾问列表</blockquote>
+                <div class="loading-container">
+                    <div class="loading">
+                        <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                        <p class="desc">正在加载...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 顾问列表 E -->
+
+            <!-- 最近联系人 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-history-wrapper" ys-filter="historyList" id="ys-history">
+                <blockquote class="layui-elem-quote">最近联系人列表</blockquote>
+                <div class="loading-container">
+                    <div class="loading">
+                        <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                        <p class="desc">正在加载...</p>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- 最近联系人 E -->
+
+            <!-- 时间范围 S -->
+            <div class="layui-col-md2 ys-list-wrapper ys-day-wrapper" ys-filter="dayList">
+                <blockquote class="layui-elem-quote">时间范围</blockquote>
+                <ul class="day-list">
+                    <li ys-event="day">最近7天</li>
+                    <li ys-event="day">最近30天</li>
+                    <li>
+                        <div class="ys-collapse">
+                            <h2 class="ys-coll-title">
+                                自定义时间
+                            </h2>
+                            <div class="ys-coll-content">
+                                <input type="text" class="layui-input" id="customDate" placeholder="请选择时间范围" readonly />
+                                <button ys-event="dayCustom" type="button" class="layui-btn layui-btn-fluid layui-btn-disabled" ys-filter="dayCustom">确定</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 时间范围 E -->
+
+            <!-- 聊天记录 S -->
+            <div class="layui-col-md6 ys-list-wrapper ys-chat-wrapper" ys-filter="chatRecord" id="ys-chatRecord">
+                <blockquote class="layui-elem-quote">聊天记录</blockquote>
+                <div class="loading-container">
+                    <div class="loading">
+                        <img width="24" height="24" src="./imgs/loading.gif" alt="">
+                        <p class="desc">正在加载...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 聊天记录 E -->
+        </div>
+    </div>
+
+    <script src="./layim/src/layui.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

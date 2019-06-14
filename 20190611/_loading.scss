@@ -1,0 +1,22 @@
+/** 
+ * @Author: YISHI 
+ * @Date: 2019-06-13 17:19:28 
+ * @Desc: 正在加载... 
+ */
+
+.loading-container {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    .loading {
+        width: 100%;
+        text-align: center;
+    }
+    .desc {
+        line-height: 20px;
+        font-size: 12px;
+        color: #999;
+    }
+}
