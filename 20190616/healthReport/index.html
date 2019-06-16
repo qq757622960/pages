@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layim/src/css/layui.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+
+    <div class="layui-container ys-wrapper">
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="guanjietong" value="true" lay-skin="primary" title="关节痛" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="yichang" value="true" lay-skin="primary" title="消化系统异常" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="demo">立即提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-md6">
+                <div id="app">
+                    <div class="report-wrapper">
+                        <div class="m-page">
+                            <div class="bg-image">
+                                <img src="./imgs/header.png" />
+                            </div>
+                            <div class="wrapper">
+                                <div class="m-base-info">
+                                    <h2 class="title">基础资料</h2>
+                                    <table class="table" v-if="basedata">
+                                        <colgroup>
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <col />
+                                            <col />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="./imgs/base_name.png" />
+                                                    姓名
+                                                </td>
+                                                <td>
+                                                    <img src="./imgs/base_sex.png" />
+                                                    性别
+                                                </td>
+                                                <td>
+                                                    <img src="./imgs/base_age.png" />
+                                                    年龄
+                                                </td>
+                                                <td>
+                                                    <img src="./imgs/base_height.png" />
+                                                    身高
+                                                </td>
+                                                <td>
+                                                    <img src="./imgs/base_weight.png" />
+                                                    目标体重
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    {{ basedata.username }}
+                                                </td>
+                                                <td>
+                                                    {{ basedata.gender }}
+                                                </td>
+                                                <td>
+                                                    {{ basedata.age }}岁
+                                                </td>
+                                                <td>
+                                                    {{ basedata.stature }}cm
+                                                </td>
+                                                <td>
+                                                    {{ basedata.goal }}kg
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="info-list">
+                                        <div class="item">
+                                            <span class="label">当前体重</span>
+                                            <span class="value">52.6kg</span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="ys-collapse" ys-filter="bmi">
+                                                <div class="ys-coll-title">
+                                                    <span class="label">BMI</span>
+                                                    <span class="value">30.0</span>
+                                                    <div class="level">
+                                                        <span class="btn">肥胖</span>
+                                                    </div>
+                                                    <i class="iconfont">&#xe62a;</i>
+                                                </div>
+                                                <div class="ys-coll-cont ys-show">
+                                                    <button-counter></button-counter>
+                                                    <!-- <div class="ys-progress"> -->
+                                                        <!-- 此处 div 用于解决 :last-child 无法选中最后一个 bar -->
+                                                        <!-- <div class="wrapper">
+                                                            <div class="ys-progress-bar">
+                                                                <span class="ys-progress-text">标准</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ys-progress-vernier" ref="vernier">
+                                                            <span>35</span>
+                                                        </div> -->
+                                                    <!-- </div> -->
+                                                    <div class="intro">BMI是世界公认的一种评定肥胖程度的分级方法，目前世界卫生组织也以BMI来对肥胖或超重进行定义。</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-danger">
+                                    <div class="fat-danger">
+                                        <h2 class="title">肥胖引起的风险</h2>
+                                        <ul class="list">
+                                            <li class="item">
+                                                <img src="./imgs/d_guanjie.png" />
+                                                <p>关节痛</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_wei.png" />
+                                                <p>消化系统异常</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_shengzhi.png" />
+                                                <p>生殖激素影响</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_xiaochuan.png" />
+                                                <p>哮喘</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_xinfei.png" />
+                                                <p>心肺功能不全</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_neifenbi.png" />
+                                                <p>内分泌紊乱</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_yidao.png" />
+                                                <p>高胰岛素血症</p>
+                                            </li>
+                                            <li class="item">
+                                                <img src="./imgs/d_qita.png" />
+                                                <p>其他影响</p>
+                                            </li>
+                                        </ul>
+                                        <ul class="desc-list">
+                                            <li class="item">
+                                                <span>关节痛</span>
+                                                <p>关节痛是肥胖患者最多见的症状。主要是机械性损伤。进行性关节损害及其症状加重引起疼痛。但是也有代谢的原因，如脂肪增加所引起的代谢改变。双手的骨关节病多见于超重患者，痛风也多见于肥胖患者
+                                                </p>
+                                            </li>
+                                            <li class="item">
+                                                <span>关节痛</span>
+                                                <p>关节痛是肥胖患者最多见的症状。主要是机械性损伤。进行性关节损害及其症状加重引起疼痛。但是也有代谢的原因，如脂肪增加所引起的代谢改变。双手的骨关节病多见于超重患者，痛风也多见于肥胖患者
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="reduce-weight">
+                                        <h2 class="title">减肥定制方案</h2>
+                                        <p class="method">根据您的运动、膳食及身体近况，推荐可达成的目标，让您的付出事半功倍</p>
+                                        <ul class="method-list">
+                                            <li class="item">
+                                                <h3>01 膳食方案</h3>
+                                                <div class="method-cont">
+                                                    <img src="./imgs/xihongshi.png" />
+                                                    <p>幻轻会根据您的饮食习惯、食物喜好和实际条件，为您私人定制符合您减脂刚需且容易执行的膳食方案，通过调膳食模式就可以达到健康减脂的目的</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <h3>02 运动方案</h3>
+                                                <div class="method-cont">
+                                                    <img src="./imgs/xihongshi.png" />
+                                                    <p>幻轻通过提高身体的肌肉活力，从而提高基础代谢率，促进身体对蛋白质的需求和吸收能力，使身体能够充分利用日常饮食中的营养物质，避免脂肪堆积</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <h3>03 搭配产品</h3>
+                                                <div class="method-cont">
+                                                    <img src="./imgs/xihongshi.png" />
+                                                    <p>通过幻轻为您搭配的产品，调节营养均衡，补充必要的营养素，确保身体对营养需求得到满足的同时，达到健康有效的减脂效果</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="reason">
+                                        <h2 class="title">肥胖涉及的成因</h2>
+                                        <ul class="reason-list">
+                                            <li class="item">
+                                                <div class="ys-collapse">
+                                                    <h2 class="ys-coll-title">
+                                                        <span>01 遗传因素</span>
+                                                        <i class="iconfont">&#xe62a;</i>
+                                                    </h2>
+                                                    <div class="ys-coll-cont">
+                                                        <p>
+                                                            动物实验和人类流行病学研究表明，单纯性肥胖可呈-定家族倾向。肥胖的父母常有肥胖的子女，父母体.重正常者，其子女肥胖几率约10%，而父母中1人或两人均肥胖者，其子女肥胖几率分别增为50%和80%，但未确定遗传方式，对肥胖者收养子女发胖情况有类似家庭聚集情况。单卵孪生子女生后分开抚养，成年后肥胖发生率是双卵肥胖率的2倍。遗传因素是肥胖的易发因素，肥胖是多基因遗传，多后天因素的疾病。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="ys-collapse">
+                                                    <h2 class="ys-coll-title">
+                                                        <span>02 瘦素</span>
+                                                        <i class="iconfont">&#xe62a;</i>
+                                                    </h2>
+                                                    <div class="ys-coll-cont">
+                                                        <p>
+                                                            动物实验和人类流行病学研究表明，单纯性肥胖可呈-定家族倾向。肥胖的父母常有肥胖的子女，父母体.重正常者，其子女肥胖几率约10%，而父母中1人或两人均肥胖者，其子女肥胖几率分别增为50%和80%，但未确定遗传方式，对肥胖者收养子女发胖情况有类似家庭聚集情况。单卵孪生子女生后分开抚养，成年后肥胖发生率是双卵肥胖率的2倍。遗传因素是肥胖的易发因素，肥胖是多基因遗传，多后天因素的疾病。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="service">
+                                    <h2>服务须知</h2>
+                                    <ul class="list">
+                                        <li class="item">
+                                            <h3><span></span>接受顾问指导及建议</h3>
+                                            <p>服务期间请按指导摄入产品，确保燃脂效果，请勿随便使用产品。</p>
+                                        </li>
+                                        <li class="item">
+                                            <h3><span></span>按时上传饮食照片</h3>
+                                            <p>按时上传您的饮食照片，以便我们评估您的热量摄入情况，并回复给您准确的膳食建议。</p>
+                                        </li>
+                                        <li class="item">
+                                            <h3><span></span>请勿隐瞒实际情况</h3>
+                                            <p>为了您的体重管理，请勿隐瞒实际食物摄入量，以免评估有误。</p>
+                                        </li>
+                                        <li class="item">
+                                            <h3><span></span>相信我们的专业程度</h3>
+                                            <p>服务期间请勿使用其他产品，相信您此次选择是最明确的!</p>
+                                        </li>
+                                    </ul>
+                                    <div class="thanks">
+                                        <p>减肥是需要长期坚持的，一定要配合顾问的指导，为了能达到您理想的身材，请继续坚持噢!</p>
+                                        <h2>感谢您对我们的信任!</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../layim/src/layui.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
