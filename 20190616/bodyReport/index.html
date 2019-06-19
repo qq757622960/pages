@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layim/src/css/layui.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+
+    <div class="layui-container ys-wrapper">
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="guanjietong" value="true" lay-skin="primary" title="关节痛" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="yichang" value="true" lay-skin="primary" title="消化系统异常" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="demo">立即提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-md6">
+                <div id="app">
+                    <div class="report-wrapper">
+                        <div class="m-page">
+                            <div class="bg-image">
+                                <img src="./imgs/header.png" />
+                            </div>
+                            <div class="wrapper">
+                                <div class="main">
+                                    <h2 class="title">
+                                        <span>体脂数据分析报告</span>
+                                    </h2>
+                                    <div class="data-compare">
+                                        <h3 class="title">
+                                            <img src="./imgs/compare_title.png" alt="">
+                                            各项数据指标
+                                        </h3>
+                                        <table class="table">
+                                            <colgroup>
+                                                <col width="33.3333%" />
+                                                <col width="33.3333%" />
+                                                <col width="33.3333%" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td>体重</td>
+                                                    <td>50KG </td>
+                                                    <td><span>51KG</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BMI</td>
+                                                    <td>30 </td>
+                                                    <td><span>28.5</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>内脏脂肪</td>
+                                                    <td>6</td>
+                                                    <td><span>7</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>水分</td>
+                                                    <td>50.3%</td>
+                                                    <td><span>50.3%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>基础代谢</td>
+                                                    <td>1339</td>
+                                                    <td><span>1440</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>体脂率</td>
+                                                    <td>19.8%</td>
+                                                    <td><span>18.8%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>骨量</td>
+                                                    <td>1.8KG</td>
+                                                    <td><span>1.9KG</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>肌肉率</td>
+                                                    <td>35.0%</td>
+                                                    <td><span>38.5%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>蛋白率</td>
+                                                    <td>16.6%</td>
+                                                    <td><span>18%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>皮下脂肪</td>
+                                                    <td>18.4%</td>
+                                                    <td><span>19.6%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>标准体重</td>
+                                                    <td>48.8KG</td>
+                                                    <td><span>50.0KG</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>脂肪量</td>
+                                                    <td>6.6KG</td>
+                                                    <td><span>7.0KG</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="advise">
+                                    <div class="info-list">
+                                        <div class="item">
+                                            <span class="important">
+                                                <img class="imt" src="./imgs/jinggao.png" />
+                                                建议您重点关注以下指标
+                                            </span>
+                                        </div>
+                                        <div class="item">
+                                            <div class="collapse">
+                                                <div class="coll-title">
+                                                    <div class="name">
+                                                        <img src="./imgs/bmi.png" />
+                                                        BMI
+                                                    </div>
+                                                    <i class="iconfont icon-jiantou1"></i>
+                                                </div>
+                                                <div class="coll-cont">
+                                                    <div class="value">
+                                                        <p>根据您的报告分析，您的 BMI 值为</p>
+                                                        <span>26.5</span>
+                                                    </div>
+                                                    <div class="think">
+                                                        <div class="progress">进度条</div>
+                                                        <p class="result">
+                                                            <img class="imt" src="./imgs/jinggao.png" />
+                                                            您的分析结果BMI值为26.5，属于超重范围，存在向肥胖程度发展的趋势，需要加强对减重的重视，把BMI减到正常范围，请注意控制高油高脂食物的摄入，并且多做运动。
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="foot">
+                                    <div class="f-summary">
+                                        <h2 class="title">
+                                            <img src="./imgs/jianyi.png" />
+                                            结论和建议
+                                        </h2>
+                                        <p>您的BMI与体脂率均偏高，属于肥胖型身材，这会增加日后患糖尿病，高血压等代谢性疾病的风险。请减少能量摄入，注意均衡营养，可以适当多运动。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="../layim/src/layui.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="./index.js"></script>
+    <script src="./progress.js"></script> -->
+
+</body>
+
+</html>

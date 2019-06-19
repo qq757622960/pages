@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layim/src/css/layui.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+
+    <div class="layui-container ys-wrapper">
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="guanjietong" value="true" lay-skin="primary" title="关节痛" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="yichang" value="true" lay-skin="primary" title="消化系统异常" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="demo">立即提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-md6">
+                <div id="app">
+                    <div class="report-wrapper">
+                        <div class="m-page">
+                            <div class="bg-image">
+                                <img src="./imgs/header.png" />
+                            </div>
+                            <div class="m-page">
+                                <v-header></v-header>
+                                <div class="bg-image" :style="bgStyle" ref="bgImage">
+                                    <div class="filter" ref="filter"></div>
+                                </div>
+                                <div class="bg-layer" ref="layer"></div>
+                                <scroll class="wrapper" ref="scroll" @scroll="scroll" :listen-scroll="listenScroll" :probe-type="probeType">
+                                    <div>
+                                        <div class="h-card">
+                                            <div class="h-card-cont">
+                                                <p>
+                                                    <span>您的结课报告已完成</span>
+                                                    <span>2019/4/12-2019/4/19</span>
+                                                </p>
+                                            </div>
+                                            <p class="h-text">
+                                                亲爱的小主，经过一星期的减脂，相信您的身体各项指标数据都有变化，下面就让我们来分析您的各项数据变化吧!
+                                            </p>
+                                        </div>
+                                        <div class="echart-cont">
+                                            <div class="echart-title">
+                                                <img src="./imgs/icon.png" alt="">
+                                                <h2>过去一周的历史曲线</h2>
+                                            </div>
+                                            <ve-line :data="chartData" :settings="chartSettings" :events="chartEvents">
+                                            </ve-line>
+                                            <div class="echart-summary">
+                                                <p>您在最近的一周时间里，体重从55.4kg减到52.6kg</p>
+                                                <span>减重2.8kg</span>
+                                                <p>请继续保持，再接再励哦!</p>
+                                            </div>
+                                        </div>
+                                        <div class="main">
+                                            <div class="data-compare">
+                                                <h2 class="title">
+                                                    <img src="./imgs/compare_title.png" alt="">
+                                                    各项数据对比
+                                                </h2>
+                                                <table class="table">
+                                                    <colgroup>
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>体重</td>
+                                                            <td>50KG </td>
+                                                            <td><span>51KG</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>BMI</td>
+                                                            <td>30 </td>
+                                                            <td><span>28.5</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>内脏脂肪</td>
+                                                            <td>6</td>
+                                                            <td><span>7</span></td>
+                                                            <td><img src="./imgs/down.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>水分</td>
+                                                            <td>50.3%</td>
+                                                            <td><span>50.3%</span></td>
+                                                            <td><img class="equal" src="./imgs/equal.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>基础代谢</td>
+                                                            <td>1339</td>
+                                                            <td><span>1440</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>体脂率</td>
+                                                            <td>19.8%</td>
+                                                            <td><span>18.8%</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>骨量</td>
+                                                            <td>1.8KG</td>
+                                                            <td><span>1.9KG</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>肌肉率</td>
+                                                            <td>35.0%</td>
+                                                            <td><span>38.5%</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>蛋白率</td>
+                                                            <td>16.6%</td>
+                                                            <td><span>18%</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>皮下脂肪</td>
+                                                            <td>18.4%</td>
+                                                            <td><span>19.6%</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>标准体重</td>
+                                                            <td>48.8KG</td>
+                                                            <td><span>50.0KG</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>脂肪量</td>
+                                                            <td>6.6KG</td>
+                                                            <td><span>7.0KG</span></td>
+                                                            <td><img src="./imgs/up.png" /></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="foot">
+                                            <div class="f-summary">
+                                                <h2 class="title">全程总减量2.8kg</h2>
+                                                <div class="charts">
+                                                    <img src="./imgs/charts.png" />
+                                                    <ul class="list">
+                                                        <li>
+                                                            <span class="label">减少脂肪:</span>
+                                                            <span class="text orange">1.0kg</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">体脂率下降:</span>
+                                                            <span class="text orange">1%</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">蛋白率增加:</span>
+                                                            <span class="text green">1.4%</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">身体水分达到:</span>
+                                                            <span class="text green">50.3%</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label">基础代谢达到:</span>
+                                                            <span class="text green">1450</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <p class="f-end-text">结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语结束话语</p>
+                                        </div>
+                                    </div>
+                                    <loading></loading>
+                                </scroll>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./progressTable.js"></script>
+    <script src="../layim/src/layui.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="./index.js"></script>
+    <script src="./progress.js"></script>
+
+</body>
+
+</html>

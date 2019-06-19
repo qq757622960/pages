@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../layim/src/css/layui.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+
+    <div class="layui-container ys-wrapper">
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="guanjietong" value="true" lay-skin="primary" title="关节痛" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <input type="checkbox" name="yichang" value="true" lay-skin="primary" title="消化系统异常" />
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit lay-filter="demo">立即提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-md6">
+                <div id="app">
+                    <div class="report-wrapper">
+                        <div class="m-page">
+                            <div class="bg-image">
+                                <img src="./imgs/header.png" />
+                            </div>
+                            <div class="wrapper">
+                                <div>
+                                    <div class="h-card">
+                                        <div class="h-card-cont">
+                                            <p>
+                                                尊敬的名字，根据您的各项指标以及近期的身体情况，我们为您制定了这份健康减肥食谱，在保证充足营养的前提下，控制热量摄入，从而实现吃瘦目标，请努力坚持哦!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="main">
+                                        <h2 class="m-title">健康减肥食谱</h2>
+                                        <div class="m-text">
+                                            <ol>
+                                                <li>1、每类食物旁标注的数字表示可选数量，例如:谷薯杂豆*1表示从列出的食物中任选1个，肉和蛋*2表示任选2个。</li>
+                                                <li>2、食物克数为可食用部分，烧熟重量，例如玉米不含棒子。</li>
+                                                <li>3、如果觉得饿，先喝水，可以吃1个番茄或者1根黄瓜。</li>
+                                            </ol>
+                                        </div>
+                                        <div class="m-table-list">
+                                            <div class="m-table-item">
+                                                <quote text="早餐(8:00约300千卡)"></quote>
+                                                <table class="table green">
+                                                    <colgroup>
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <td>谷薯杂豆*1</td>
+                                                            <td>肉和蛋*1</td>
+                                                            <td>奶和大豆*1</td>
+                                                            <td>蔬菜水果*0</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1片全麦面包40g</td>
+                                                            <td>1个煮鸡蛋70g </td>
+                                                            <td>200mI纯牛奶</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1碗紫薯粥250g</td>
+                                                            <td>2根鸡胸肉肠</td>
+                                                            <td>100ml原味酸奶</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25g奇亚籽燕麦片</td>
+                                                            <td></td>
+                                                            <td>250ml无糖豆浆</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="m-table-item">
+                                                <quote text="午餐(8:00约300千卡)" color="orange"></quote>
+                                                <table class="table orange">
+                                                    <colgroup>
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                        <col width="25%" />
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <td>谷薯杂豆*1</td>
+                                                            <td>肉和蛋*1</td>
+                                                            <td>奶和大豆*1</td>
+                                                            <td>蔬菜水果*0</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1片全麦面包40g</td>
+                                                            <td>1个煮鸡蛋70g </td>
+                                                            <td>200mI纯牛奶</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>1碗紫薯粥250g</td>
+                                                            <td>2根鸡胸肉肠</td>
+                                                            <td>100ml原味酸奶</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25g奇亚籽燕麦片</td>
+                                                            <td></td>
+                                                            <td>250ml无糖豆浆</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="foot">
+                                        <p class="f-text">
+                                            为了更好的瘦身效果，请将每日进食的食物反馈给健康顾问，由健康顾问做出专业的点评服务并给补充意见，确保膳食均衡，营养全面充足。
+                                        </p>
+                                        <div class="f-hr">
+                                            <img src="./imgs/footer_divider.png" />
+                                        </div>
+                                        <ul class="f-suggestion-list">
+                                            <li>
+                                                <h2><span>01</span>热量窗口把关</h2>
+                                                <p>监控每一餐的热量摄入，控制每天摄入的总热量不超过减脂需要，守住脂肪合成第一关。</p>
+                                            </li>
+                                            <li>
+                                                <h2><span>02</span>营养均衡控制</h2>
+                                                <p>分析每一餐的营养均衡情况，严格控制无营养的高热量摄入，兼顾各种营养的全面到位。</p>
+                                            </li>
+                                            <li>
+                                                <h2><span>03</span>膳食调整建议</h2>
+                                                <p>以饮食搭配方案为基础，根据反馈的实际情况进行实时调整，为脂肪的燃烧“添油加醋’。</p>
+                                            </li>
+                                        </ul>
+                                        <div class="f-attention-items">
+                                            <quote text="注意事项" color="orange" style="box-shadow: 0 0 0;"></quote>
+                                            <ol>
+                                                <li>1、每天的食用油脂不能超过25g</li>
+                                                <li>2、每天食用盐不超过6g</li>
+                                                <li>3、每天饮水量不少于2000ml</li>
+                                                <li>4、烹饪方式遵从:蒸、炖、焯、煮</li>
+                                                <li>5、如果两餐之间有饥饿感请需求健康顾问意见进食</li>
+                                                <li>6、如果无法按照方案进食的情况下，请将食物用水泡洗一遍</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./progressTable.js"></script>
+    <script src="../layim/src/layui.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="./index.js"></script>
+    <script src="./progress.js"></script>
+
+</body>
+
+</html>

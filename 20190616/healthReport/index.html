@@ -94,34 +94,30 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <div class="info-list">
+                                    <div class="info-list" v-if="basedata">
                                         <div class="item">
                                             <span class="label">当前体重</span>
                                             <span class="value">52.6kg</span>
                                         </div>
                                         <div class="item">
-                                            <div class="ys-collapse" ys-filter="bmi">
-                                                <div class="ys-coll-title">
+                                            <div class="ys-collapse">
+                                                <div class="ys-coll-title" @click="bmiToggle">
                                                     <span class="label">BMI</span>
                                                     <span class="value">30.0</span>
                                                     <div class="level">
-                                                        <span class="btn">肥胖</span>
+                                                        <span class="btn" :style="{ backgroundColor: bmi.color }">{{ bmi.text }}</span>
                                                     </div>
-                                                    <i class="iconfont">&#xe62a;</i>
+                                                    <i class="iconfont" :class="[bmi.isShow ? 'icon-shangjiantou' : 'icon-jiantou1']"></i>
                                                 </div>
-                                                <div class="ys-coll-cont ys-show">
-                                                    <button-counter></button-counter>
-                                                    <!-- <div class="ys-progress"> -->
-                                                        <!-- 此处 div 用于解决 :last-child 无法选中最后一个 bar -->
-                                                        <!-- <div class="wrapper">
-                                                            <div class="ys-progress-bar">
-                                                                <span class="ys-progress-text">标准</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="ys-progress-vernier" ref="vernier">
-                                                            <span>35</span>
-                                                        </div> -->
-                                                    <!-- </div> -->
+                                                <div class="ys-coll-cont" :class="[bmi.isShow ? 'ys-show' : '']">
+                                                    <v-progress
+                                                        :value="basedata.bmi"
+                                                        :level-list="bmiProgressObj.list"
+                                                        :type="bmiProgressObj.type"
+                                                        :max="bmiProgressObj.max"
+                                                        :min="bmiProgressObj.min"
+                                                        @progress="progress">
+                                                    </v-progress>
                                                     <div class="intro">BMI是世界公认的一种评定肥胖程度的分级方法，目前世界卫生组织也以BMI来对肥胖或超重进行定义。</div>
                                                 </div>
                                             </div>
@@ -270,10 +266,12 @@
         </div>
     </div>
 
+    <script src="./progressTable.js"></script>
     <script src="../layim/src/layui.js"></script>
     <script src="../js/vue.js"></script>
     <script src="./index.js"></script>
-
+    <script src="./progress.js"></script>
+    
 </body>
 
 </html>

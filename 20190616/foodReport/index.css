@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* Moudle 颜色定义规范
+----------------------------------------------------- */
+/* Moudle 颜色定义规范
+----------------------------------------------------- */
+.ys-progress { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; height: 6px; padding: 20px 0; border-radius: 6px; }
+.ys-progress .wrapper { width: 100%; }
+.ys-progress .ys-progress-bar { text-align: center; display: inline-block; height: 6px; }
+.ys-progress .ys-progress-bar:first-child { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+.ys-progress .ys-progress-bar:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+.ys-progress .ys-progress-bar .ys-progress-text { position: relative; top: -28px; font-size: 12px; color: #666666; white-space: nowrap; }
+.ys-progress .ys-progress-vernier { position: absolute; left: 0; top: 16px; width: 14px; height: 14px; border: 3px solid #f5f5f5; background-color: #ff3d6f; border-radius: 50%; }
+.ys-progress .ys-progress-vernier span { position: absolute; top: 12px; font-size: 12px; color: #666666; }
+
+.h-card, .main, .foot { background-color: #ffffff; }
+
+.foot { padding: 10px; font-size: 14px; }
+.foot .f-text, .foot .f-suggestion-list, .foot .f-attention-items ol { padding: 10px; }
+.foot .f-hr { margin: 5px 0; }
+.foot .f-suggestion-list li { margin-bottom: 30px; }
+.foot .f-suggestion-list h2 { margin-bottom: 9px; }
+.foot .f-suggestion-list h2 span { padding-right: 12px; }
+.foot .f-suggestion-list p { color: #666666; padding-left: 27px; }
+.foot .f-attention-items ol { color: #666666; padding-left: 27px; }
+.foot .f-attention-items ol li { margin-bottom: 10px; }
+
+.main { margin-bottom: 15px; }
+.main .m-title { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 100%; height: 67.5px; margin-bottom: 15px; font-size: 18px; color: #ffffff; background: url(./imgs/food/main_title_bg.png) 0 0/cover; }
+.main .m-text { padding: 15px; color: #64db48; font-size: 14px; }
+.main .m-text ol { border-radius: 2.5px; padding: 18px 7.5px; background-color: rgba(100, 219, 72, 0.1); }
+.main .m-text ol li { text-align: justify; padding-bottom: 5px; }
+.main .m-table-list .m-table-item { margin-bottom: 35px; }
+.main .m-table-list .m-table-item:last-child { margin-bottom: 0; }
+.main .m-table-list .m-table-item .table { margin: 10px; text-align: center; font-size: 14px; }
+.main .m-table-list .m-table-item .table.green thead { background-color: #76d864; }
+.main .m-table-list .m-table-item .table.orange thead { background-color: #f9b044; }
+.main .m-table-list .m-table-item .table.blue thead { background-color: #2e80cd; }
+.main .m-table-list .m-table-item .table.purple thead { background-color: #c351e7; }
+.main .m-table-list .m-table-item .table thead { color: #ffffff; }
+.main .m-table-list .m-table-item .table tbody td { text-align: left; color: #222; font-size: 12px; }
+.main .m-table-list .m-table-item .table td { padding: 5px; border: 1px solid #fbfbfb; }
+
+.h-card { width: 100%; height: 150px; background-color: #ffffff; }
+.h-card .h-card-cont { position: relative; top: -30px; width: 80%; height: 150px; padding: 5px; margin: 0 auto; -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); background-color: #ffffff; }
+.h-card .h-card-cont p { padding: 18px; width: 100%; height: 140px; border: 1px solid #64db48; font-size: 14px; text-align: justify; }
