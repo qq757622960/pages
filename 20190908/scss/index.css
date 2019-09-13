@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.ys-cont { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; width: 540px; height: 800px; }
+.ys-cont .ys-imgs { position: absolute; z-index: 1; width: 500px; height: 700px; background: url(../imgs/jiashu.jpeg) 0/cover no-repeat; opacity: .1; }
+.ys-cont .ys-inner { position: relative; width: 500px; height: 700px; background-color: #ffffff; -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2); box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2); }
+.ys-cont .ys-inner .ys-txt { padding: 30px 30px 0 30px; font-weight: 200; }
+.ys-cont .ys-inner .ys-txt h3 { font-size: 16px; font-weight: 200; padding-bottom: 15px; }
+.ys-cont .ys-inner .ys-txt p { text-align: justify; padding-bottom: 15px; }
+.ys-cont .ys-inner .ys-txt span { border-radius: 2px; background: -webkit-gradient(linear, left top, right top, from(#fce4ed), to(#ffe8cc)); background: linear-gradient(to right, #fce4ed, #ffe8cc); }
+
+.circular { position: absolute; bottom: 42px; right: 422px; width: 30px; height: 30px; margin: 3px auto 0; }
+
+.circular svg { display: block; overflow: visible; }
+
+.circular path { fill: none; }

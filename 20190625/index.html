@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>健康档案</title>
+    <link rel="stylesheet" href="../layim/src/css/layui.css" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="container" style="display: none;">
+            <div class="layui-card">
+                <div class="layui-card-header m-title">
+                    <img class="icon" src="./imgs/1.png" alt="" />基本信息
+                </div>
+                <div class="layui-card-body">
+                    <ul class="m-list m-base-list">
+                        <li class="item">
+                            <span class="label">姓名:</span> 
+                            <span class="value">张某某</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header m-title">
+                    <img class="icon" src="./imgs/2.png" alt="" />健康状况
+                </div>
+                <div class="layui-card-body layui-form">
+                    <ul class="m-list m-health-list">
+                        <li class="item">
+                            <input type="checkbox" name="health" title="高血压" lay-skin="primary" checked disabled>
+                        </li>
+                        <li class="item info">
+                            <span class="label">姓名:</span>
+                            <span class="value">张某某</span>
+                        </li>
+                        <li class="item info">
+                            <span class="label">姓名:</span>
+                            <span class="value">张某某</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header m-title">
+                    <img class="icon" src="./imgs/3.png" alt="" />膳食情况
+                </div>
+                <div class="layui-card-body">
+                    <ul class="m-list m-meal-list">
+                        <li class="item">
+                            <span class="label">姓名:</span>
+                            <span class="value">张某某</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header m-title">
+                    <img class="icon" src="./imgs/4.png" alt="" />运动情况
+                </div>
+                <div class="layui-card-body">
+                    <ul class="m-list m-sport-list">
+                        <li class="item">
+                            <span class="label">姓名:</span>
+                            <span class="value">张某某</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-card">
+                <div class="layui-card-header m-title">
+                    <img class="icon" src="./imgs/5.png" alt="" />减重相关
+                </div>
+                <div class="layui-card-body">
+                    <ul class="m-list m-weight-list">
+                        <li class="item">
+                            <span class="label">姓名:</span>
+                            <span class="value">张某某</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="m-nodata">
+            <p>暂无数据</p>
+        </div>
+    </div>
+    <script src="../layim/src/layui.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ys-cont {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 540px;
+    height: 800px;
+    // border: 1px solid red;
+
+    .ys-imgs {
+        position: absolute;
+        // top: 0;
+        // right: 0;
+        // bottom: 0;
+        // left: 0;
+        z-index: 1;
+        width: 500px;
+        height: 700px;
+        background: url(../imgs/jiashu.jpeg) 0 / cover no-repeat;
+        opacity: .1;
+    }
+
+    .ys-inner {
+        position: relative;
+        width: 500px;
+        height: 700px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .2);
+
+
+        .ys-txt {
+            padding: 30px 30px 0 30px;
+            font-weight: 200;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 200;
+                padding-bottom: 15px;
+            }
+
+            p {
+                text-align: justify;
+                padding-bottom: 15px;
+            }
+
+            span {
+                border-radius: 2px;
+                background: linear-gradient(to right, #fce4ed, #ffe8cc);
+            }
+        }
+    }
+
+}
+
+.circular {
+    position: absolute;
+    bottom: 42px;
+    right: 422px;
+    width: 30px;
+    height: 30px;
+    margin: 3px auto 0;
+}
+
+.circular svg {
+    display: block;
+    overflow: visible;
+    // fill: #fff;
+}
+
+.circular path {
+    fill: none;
+}

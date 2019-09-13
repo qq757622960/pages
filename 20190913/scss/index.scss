@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Varela Round';
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.ys-container {
+    position: relative;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 900px;
+    background-color: #fbfbfb;
+
+    .ys-film {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 32px;
+        bottom: 26px;
+        width: 66px;
+        height: 66px;
+        border-radius: 100%;
+        background: linear-gradient(to right, #9a67bc, #7f81c5);
+
+        i {
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+
+    .ys-cont {
+        position: relative;
+        width: 450px;
+        height: 800px;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+        overflow: hidden;
+    }
+
+    .ys-head {
+        width: 100%;
+        height: 250px;
+        padding: 0 25px;
+        background: linear-gradient(to right, #9a67bc, #7f81c5);
+
+        .ys-head-title {
+            font-size: 30px;
+            font-weight: 100;
+            color: #fff;
+        }
+
+        .ys-head-info {
+            display: flex;
+            align-items: flex-end;
+            height: 100px;
+            margin-bottom: 34px;
+
+            .info-first {
+                margin-right: auto;
+            }
+
+            .info-item {
+                margin-right: 15px;
+            }
+
+            .icon {
+                font-size: 32px;
+                color: #fff;
+            }
+
+            .icon-touzi2 {
+                position: relative;
+                top: 5px;
+                font-size: 43px;
+            }
+
+            .avatar {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+    .ys-list-cont {
+        margin-top: -50px;
+        padding: 50px 25px;
+        width: 100%;
+        // height: 500px;
+        border-radius: 40px;
+        background-color: #fff;
+
+        .title {
+            color: #111111;
+            font-size: 22px;
+        }
+
+        .ys-list {
+            &-item {
+                display: flex;
+                margin-top: 25px;
+
+                .video {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 10px;
+                    background: url(../imgs/2.jpeg) 0 / cover no-repeat;
+                    background-position-x: -9px;
+
+                    .play {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 100%;
+                        background: rgba(255, 255, 255, 0.3);
+                        backdrop-filter: blur(5px);
+                        .progress {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            color: #fff;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .play-icon {
+                        position: absolute;
+                        top: 50%;
+                        left: 52%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    .icon-bofang {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+                    .time {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(255, 255, 255, 0.3);
+                        backdrop-filter: blur(5px);
+                        font-size: 12px;
+                        padding: 0 8px;
+                        color: #fff;
+                        border-top-left-radius: 10px;
+                        border-bottom-right-radius: 10px;
+                        font-family: 'helvetica neue,arial,hiragino sans gb,stheiti,wenquanyi micro hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif';
+                    }
+                }
+
+                .txt {
+                    flex: 1;
+                    margin-left: 20px;
+                    padding: 10px 0;
+                    width: 180px;
+
+                    p {
+                        margin-bottom: 15px;
+                        font-size: 18px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        font-weight: 600;
+                        line-height: 1.4;
+                        color: #111111;
+                    }
+
+                    .operate {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0 7px;
+                        height: 22px;
+                        border-radius: 8px;
+                        font-size: 10px;
+                        color: #999999;
+                        text-transform: uppercase;
+
+                        &.default {
+                            background-color: #ededed;
+                        }
+
+                        &.success {
+                            background-color: #f4ecd9;
+                        }
+                    }
+                }
+
+                .more {
+                    position: relative;
+                    top: 5px;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: auto;
+                    transform: rotate(-90deg);
+                    transform-origin: top;
+
+                    i {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.progress-circle {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    circle {
+        stroke-width: 5px;
+        transform-origin: center;
+
+        &.progress-background {
+            transform: scale(0.9);
+            stroke: fill;
+        }
+
+        &.progress-bar {
+            transform: scale(0.9) rotate(-90deg);
+            stroke: #fff;
+        }
+    }
+}

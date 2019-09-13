@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/**  @Author: YISHI  @Date: 2019-09-03 23:02:41  @Desc: 首页  */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+ul, li { list-style: none; }
+
+.ys-cont { position: relative; width: 1080px; height: 820px; padding: 30px 0 0 0; background: #fff7ce; overflow: hidden; }
+.ys-cont .ys-main { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 987px; height: 620px; margin: 0 auto; border-radius: 15px; background: url(../imgs/1.jpg) 0/cover no-repeat; -webkit-box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.6); box-shadow: 0 2px 30px 0 rgba(0, 0, 0, 0.6); }
+.ys-cont .ys-main .ys-txt { color: #fff; font-family: 'Patrick Hand'; }
+.ys-cont .ys-main .ys-txt h2 { text-align: center; font-size: 50px; letter-spacing: 10px; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(rgba(255, 255, 255, 0.1))); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.ys-cont .ys-main .ys-txt h3 { font-weight: 100; font-size: 40px; letter-spacing: 5px; }
+.ys-cont .ys-cutline { position: absolute; top: 40%; left: -20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; height: 40px; -webkit-transform: rotate(90deg); transform: rotate(90deg); -webkit-transform-origin: center; transform-origin: center; opacity: .6; }
+.ys-cont .ys-cutline .line { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; height: 2px; -webkit-transform: scaleY(0.5); transform: scaleY(0.5); background-color: #fff; }
+.ys-cont .ys-cutline .txt { font-family: 'Varela Round'; letter-spacing: 2px; color: #ffffff; margin: 0 20px; }
+.ys-cont .ys-small-pics { position: absolute; left: 36%; bottom: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+.ys-cont .ys-small-pics .ys-small-item { position: relative; margin-right: 30px; width: 230px; height: 306px; border-radius: 15px; background: url(../imgs/4.jpeg) 0/cover no-repeat; -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.6); box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.6); color: #fff; }
+.ys-cont .ys-small-pics .ys-small-item:last-child { margin-right: 0; background-image: url(../imgs/5.jpeg); }
+.ys-cont .ys-small-pics .ys-small-item:last-child span { background-image: url(../imgs/5.jpeg) !important; }
+.ys-cont .ys-small-pics .ys-small-item:first-child { background-image: url(../imgs/3.jpeg); }
+.ys-cont .ys-small-pics .ys-small-item:first-child span { background-image: url(../imgs/3.jpeg) !important; }
+.ys-cont .ys-small-pics .ys-small-item .title { position: absolute; top: 50%; left: 20px; -webkit-transform: rotate(-7deg); transform: rotate(-7deg); font-size: 20px; font-family: 'Give You Glory'; font-weight: 100; }
+.ys-cont .ys-small-pics .ys-small-item .sub { height: 98%; padding-left: 15px; font-weight: 100; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; font-family: 'Varela Round'; }
+.ys-cont .ys-small-pics .ys-small-item .num-box { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 38px; height: 38px; position: absolute; top: 50%; right: -18px; border-radius: 6px; background-color: #ffffff; }
+.ys-cont .ys-small-pics .ys-small-item span { background: url(../imgs/4.jpeg) 0/cover no-repeat; -webkit-background-clip: text; color: transparent; font-family: 'Varela Round'; }

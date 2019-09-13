@@ -6,15 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./layim/src/css/layui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/v-charts/lib/style.min.css">
 </head>
 <body>
-    
+    <div id="app">
+        <ve-line :data="chartData"></ve-line>
+    </div>
 
-    <script src="./layim/src/layui.js"></script>
-    <script src="./js/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./js/echarts.js"></script>
+    <script src="./js/v_charts.js"></script>
 
     <script>
-        
+        new Vue({
+                el: '#app',
+                data: function () {
+                    return {
+                        chartData: {
+                            columns: ['日期', '销售额'],
+                            rows: [
+                                { '日期': '1月1日', '销售额': 123 },
+                                { '日期': '1月2日', '销售额': 1223 },
+                                { '日期': '1月3日', '销售额': 2123 },
+                                { '日期': '1月4日', '销售额': 4123 },
+                                { '日期': '1月5日', '销售额': 3123 },
+                                { '日期': '1月6日', '销售额': 7123 }
+                            ]
+                        }
+                    }
+                }
+            })
     </script>
 </body>
 </html>

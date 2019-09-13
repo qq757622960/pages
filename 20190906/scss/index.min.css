@@ -1,0 +1,16 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}
+.ys-cont{position:relative;width:700px;height:800px}
+.ys-cont:after,.ys-cont:before{content:'';display:block;height:400px;width:100%}
+.ys-cont .ys-inner{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:410px;height:740px;background-color:#fff;border-radius:60px;overflow:hidden}
+.ys-cont .ys-inner .img-wrapper{width:100%;height:360px;overflow:hidden}
+.ys-cont .ys-inner .img{width:100%;height:100%;background:url(../imgs/1.jpeg) 0/cover no-repeat;-webkit-filter:blur(20px);filter:blur(20px)}
+.ys-cont .ys-inner .main{position:absolute;top:10%;left:50%;z-index:2;-webkit-transform:translate(-50%,-10%) scale(1);transform:translate(-50%,-10%) scale(1);width:80%;height:360px;background:url(../imgs/1.jpeg) 0/cover no-repeat;background-position:-85px 0}
+.ys-cont .ys-inner .ys-inner-bottom{position:relative;padding-top:80px;width:100%;height:380px;color:#fff;font-family:'Give You Glory';background-color:#000}
+.ys-cont .ys-inner .ys-inner-bottom .inner-text{margin:0 auto;width:80%;text-align:center}
+.ys-cont .ys-inner .ys-inner-bottom .inner-text h2{font-weight:700;margin-bottom:20px}
+.ys-cont .ys-inner .ys-inner-bottom .inner-text p{display:inline-block;text-align:left;line-height:2;letter-spacing:1px;font-family:'Varela Round';font-weight:100}
+.ys-cont .ys-inner .ys-inner-bottom span{position:absolute;left:50%;bottom:30px;-webkit-transform:translate(-50%,0);transform:translate(-50%,0);display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;width:40px;height:40px;border-radius:100%;background-color:#fff}
+.ys-cont .ys-inner .ys-inner-bottom span i{color:red}
+.circular{position:absolute;bottom:32px;right:182px;width:46px;height:40px;margin:3px auto 0}
+.circular svg{display:block;overflow:visible;fill:#fff}
+.circular path{fill:none}

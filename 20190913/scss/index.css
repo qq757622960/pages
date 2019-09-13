@@ -1,0 +1,38 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: 'Varela Round'; }
+
+ul, li { list-style: none; }
+
+.ys-container { position: relative; margin: 50px auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 800px; height: 900px; background-color: #fbfbfb; }
+.ys-container .ys-film { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: absolute; right: 32px; bottom: 26px; width: 66px; height: 66px; border-radius: 100%; background: -webkit-gradient(linear, left top, right top, from(#9a67bc), to(#7f81c5)); background: linear-gradient(to right, #9a67bc, #7f81c5); }
+.ys-container .ys-film i { font-size: 30px; color: #fff; }
+.ys-container .ys-cont { position: relative; width: 450px; height: 800px; -webkit-box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); overflow: hidden; }
+.ys-container .ys-head { width: 100%; height: 250px; padding: 0 25px; background: -webkit-gradient(linear, left top, right top, from(#9a67bc), to(#7f81c5)); background: linear-gradient(to right, #9a67bc, #7f81c5); }
+.ys-container .ys-head .ys-head-title { font-size: 30px; font-weight: 100; color: #fff; }
+.ys-container .ys-head .ys-head-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; height: 100px; margin-bottom: 34px; }
+.ys-container .ys-head .ys-head-info .info-first { margin-right: auto; }
+.ys-container .ys-head .ys-head-info .info-item { margin-right: 15px; }
+.ys-container .ys-head .ys-head-info .icon { font-size: 32px; color: #fff; }
+.ys-container .ys-head .ys-head-info .icon-touzi2 { position: relative; top: 5px; font-size: 43px; }
+.ys-container .ys-head .ys-head-info .avatar { display: inline-block; width: 38px; height: 38px; }
+.ys-container .ys-head .ys-head-info .avatar img { width: 100%; height: 100%; -o-object-fit: cover; object-fit: cover; border-radius: 100%; }
+.ys-container .ys-list-cont { margin-top: -50px; padding: 50px 25px; width: 100%; border-radius: 40px; background-color: #fff; }
+.ys-container .ys-list-cont .title { color: #111111; font-size: 22px; }
+.ys-container .ys-list-cont .ys-list-item { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 25px; }
+.ys-container .ys-list-cont .ys-list-item .video { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; position: relative; width: 120px; height: 120px; border-radius: 10px; background: url(../imgs/2.jpeg) 0/cover no-repeat; background-position-x: -9px; }
+.ys-container .ys-list-cont .ys-list-item .video .play { width: 50px; height: 50px; border-radius: 100%; background: rgba(255, 255, 255, 0.3); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+.ys-container .ys-list-cont .ys-list-item .video .play .progress { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: #fff; font-size: 12px; }
+.ys-container .ys-list-cont .ys-list-item .video .play-icon { position: absolute; top: 50%; left: 52%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.ys-container .ys-list-cont .ys-list-item .video .icon-bofang { color: #fff; font-size: 18px; }
+.ys-container .ys-list-cont .ys-list-item .video .time { position: absolute; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.3); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); font-size: 12px; padding: 0 8px; color: #fff; border-top-left-radius: 10px; border-bottom-right-radius: 10px; font-family: 'helvetica neue,arial,hiragino sans gb,stheiti,wenquanyi micro hei,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif'; }
+.ys-container .ys-list-cont .ys-list-item .txt { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-left: 20px; padding: 10px 0; width: 180px; }
+.ys-container .ys-list-cont .ys-list-item .txt p { margin-bottom: 15px; font-size: 18px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-weight: 600; line-height: 1.4; color: #111111; }
+.ys-container .ys-list-cont .ys-list-item .txt .operate { display: -webkit-inline-box; display: -ms-inline-flexbox; display: inline-flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 0 7px; height: 22px; border-radius: 8px; font-size: 10px; color: #999999; text-transform: uppercase; }
+.ys-container .ys-list-cont .ys-list-item .txt .operate.default { background-color: #ededed; }
+.ys-container .ys-list-cont .ys-list-item .txt .operate.success { background-color: #f4ecd9; }
+.ys-container .ys-list-cont .ys-list-item .more { position: relative; top: 5px; width: 50px; height: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-left: auto; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); -webkit-transform-origin: top; transform-origin: top; }
+.ys-container .ys-list-cont .ys-list-item .more i { font-size: 18px; }
+
+.progress-circle { position: absolute; top: 52%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); z-index: 2; }
+.progress-circle circle { stroke-width: 5px; -webkit-transform-origin: center; transform-origin: center; }
+.progress-circle circle.progress-background { -webkit-transform: scale(0.9); transform: scale(0.9); stroke: fill; }
+.progress-circle circle.progress-bar { -webkit-transform: scale(0.9) rotate(-90deg); transform: scale(0.9) rotate(-90deg); stroke: #fff; }

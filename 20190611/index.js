@@ -26,6 +26,7 @@
         });
 
         var THIS = 'ys-this', SHOW = 'ys-show';
+        var checkCache = { friend: [] };
 
         var InforCheck = function() {
             $('body').on('click', '*[ys-event]', function(e) {
@@ -35,6 +36,7 @@
             });
         };
 
+        var layimMain, list, main, search;
         var events = {
             common: function(othis) {
                 othis.siblings().removeClass(THIS);
@@ -65,6 +67,65 @@
                 show.chatRecord();
 
                 data.chatRecord();
+            },
+            search: function (othis) {
+                layimMain = $('#ys-friend');
+                main = layimMain.find('.layui-layim-search-list');
+                list = layimMain.find('.layui-layim-friend-list');
+                search = layimMain.find('.layui-layim-search');
+
+                var clearValue = search.find('.layui-icon');
+                var input = search.find('input'), find = function (e) {
+                    var val = input.val().replace(/\s/);
+                    var friend = checkCache.friends || [];
+
+                    if (val !== '') {
+                        var data = [],
+                            html = '';
+
+                        clearValue.show();
+                        
+                        for (var i = 0; i < friend.length; i++) {
+                            var item = friend[i];
+                            if (item['username'].indexOf(val) !== -1) {
+                                item.type = 'friend';
+                                item.index = i;
+                                data.push(item);
+                            }
+                        }
+                        
+                        if (data.length > 0) {
+                            for (var l = 0; l < data.length; l++) {
+                                var searchItem = data[l];
+                                html += '<li ys-event="friend" data-id="' + searchItem.id + '"><img src="' + searchItem.avatar + '" /><span>' + searchItem.username + '</span><p>' + searchItem.sign +'</p></li>';
+                            }
+                        } else {
+                            html = '<li class="layim-null">无数据</li>';
+                        }
+                        main.html(html);
+                        list.hide();
+                        main.show();
+                    } else {
+                        clearValue.hide();
+                        list.show();
+                        main.hide();
+                    }
+                };
+                input.off('keyup', find).on('keyup', find);
+            },
+            closeSearch: function(othis) {
+                var list = layimMain.find('.layui-layim-friend-list');
+                var main = layimMain.find('.layui-layim-search-list');
+                var clearValue = search.find('.layui-icon');
+
+                othis.siblings('input').val('');
+                clearValue.hide();
+                list.show();
+                main.hide();
+            },
+            listShow: function(list, main) {
+                list.show();
+                main.hide();
             }
         };
 
@@ -179,7 +240,11 @@
         }
 
         var friendsTpl = [
-            '<ul class="layui-layim-list" ys-filter="friendList">'
+            ,'<div class="layui-layim-search" style="display: block;">'
+                ,'<input placeholder="请输入需要搜索的顾问"/>'
+                ,'<label class="layui-icon" ys-event="closeSearch">ဇ</label>'
+            ,'</div>'
+            ,'<ul class="layui-layim-list layui-layim-friend-list" ys-filter="friendList">'
                 ,'{{# layui.each(d, function (index, item) { }}'
                     ,'<li ys-event="friend" data-id="{{ item.id }}">'
                         ,'<img src="{{ item.avatar }}" />'
@@ -193,6 +258,8 @@
             ,       '<p>暂无数据</p>'
             ,   '</div>'
             ,'{{#  } }}'
+            ,'<ul class="layui-layim-list layui-layim-search-list" id="ys-search-list">'
+            ,'</ul>'
         ].join('');
 
         var historyTpl = [
@@ -239,7 +306,10 @@
 
                 setTimeout(() => {
                     var html = laytpl(friendsTpl).render(friends);
+                    checkCache.friends = friends;
+                    // console.log(checkCache.friends);
                     friend.append(html);
+                    events.search();
                     loading.hide();
                 }, 1000);
                 
@@ -272,6 +342,7 @@
 
         // 初始化接口
         data.friend();
+        
 
         var inforCheck = new InforCheck();
 

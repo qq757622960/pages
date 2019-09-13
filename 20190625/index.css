@@ -1,0 +1,27 @@
+.wrapper { margin: 50px; }
+.icon { width: 16px; height: 16px; padding-right: 8px; vertical-align: middle; }
+
+.layui-card { margin-bottom: 40px; }
+.m-title { color: #0ea0ff; }
+.m-base-list,
+.m-health-list { display: flex; flex-wrap: wrap; }
+.m-base-list .item { width: 25%; padding: 10px 0; color: #6a6a6a; border-bottom: 1px solid #efefef; }
+
+.m-list .item .label { color: #6a6a6a; }
+.m-list .value { color: #0ea0ff; }
+
+.m-base-list .item:nth-child(n + 5) { border-bottom: none; }
+
+
+.m-health-list .item { width: 25%; padding: 10px 0; border-bottom: 1px solid #efefef; }
+.m-health-list .item.info { width: 100%; }
+.m-health-list .item:last-child,
+.m-meal-list .item:last-child,
+.m-sport-list .item:last-child,
+.m-weight-list .item:last-child { border-bottom: none; }
+
+.m-nodata {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

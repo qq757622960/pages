@@ -8,6 +8,26 @@
     <link rel="stylesheet" href="./layim/src/css/layui.css" />
     <link rel="stylesheet" href="./layim/src/css/modules/layim/layim.css" />
     <link rel="stylesheet" href="./index.css" />
+    <style>
+        .layui-layim-search {
+            display: none;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+            height: 28px;
+            line-height: 28px;
+            width: 97%;
+        }
+        .layui-layim-search input {
+            width: 97%;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            border: none;
+            border-radius: 3px;
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
     
@@ -16,6 +36,11 @@
             <!-- 顾问列表 S -->
             <div class="layui-col-md2 ys-list-wrapper ys-friend-wrapper">
                 <blockquote class="layui-elem-quote">顾问列表</blockquote>
+                <div class="layui-layim-search" style="display: block;">
+                    <input />
+                    <label class="layui-icon"
+                        layim-event="closeSearch">ဇ</label>
+                </div>
                 <ul class="layui-layim-list" ys-filter="friendList">
                     <li ys-event="friend" data-id="10000">
                         <img src="https://tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" />

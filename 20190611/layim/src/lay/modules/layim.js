@@ -1435,6 +1435,7 @@ layui.define(['layer', 'laytpl', 'upload'], function(exports){
       }
       search.show();
       input.focus();
+      
       input.off('keyup', find).on('keyup', find);
     }
 
