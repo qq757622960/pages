@@ -1,0 +1,11 @@
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'Patrick Hand'}
+.ys-cont{margin:0 auto;width:800px;height:800px;background-color:#ededed}
+.ys-cont .ys-inner{padding:200px 0;-webkit-transform:rotate(5deg);transform:rotate(5deg)}
+.ys-cont .ys-layer{position:absolute;left:50%;width:180px;height:320px;margin-left:-90px}
+.ys-cont .ys-layer span{position:absolute;bottom:5px;left:0;right:0;text-align:center;color:#fff;font-weight:100}
+.ys-cont .ys-layer-cont{z-index:1;background-color:#fff;-webkit-transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-120px);transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-120px)}
+.ys-cont .ys-layer-cont span{color:#000}
+.ys-cont .ys-layer-cont p{padding:20px 0;font-size:12px}
+.ys-cont .ys-layer-navigation{z-index:2;background-color:rgba(40,187,102,.5);-webkit-transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-40px);transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-40px)}
+.ys-cont .ys-layer-mask{-webkit-transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(40px);transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(40px);background-color:rgba(0,0,0,.5);z-index:3}
+.ys-cont .ys-layer-popout{-webkit-transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(120px);transform:translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(120px);border:1px solid #ccc;z-index:4}

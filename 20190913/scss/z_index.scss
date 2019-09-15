@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Patrick Hand';
+}
+
+.ys-cont {
+    margin: 0px auto;
+    width: 800px;
+    height: 800px;
+    background-color: #ededed;
+
+    .ys-inner {
+        padding: 200px 0;
+        transform: rotate(5deg);
+    }
+
+    .ys-layer {
+        position: absolute;
+        left: 50%;
+        width: 180px;
+        height: 320px;
+        margin-left: -90px;
+
+        span {
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 100;
+        }
+    }
+
+    .ys-layer-cont {
+        z-index: 1;
+        background-color: #ffffff;
+        transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-120px);
+
+        span {
+            color: #000000;
+        }
+
+        p {
+            padding: 20px 0;
+            font-size: 12px;
+            // text-align: center;
+        }
+    }
+
+
+    .ys-layer-navigation {
+        z-index: 2;
+        background-color: rgba(40, 187, 102, .5);
+        transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-40px);
+    }
+
+    .ys-layer-mask {
+        transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(40px);
+        background-color: rgba(0, 0, 0, .5);
+        z-index: 3;
+    }
+
+    .ys-layer-popout {
+        transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(120px);
+        border: 1px solid hsla(0, 0%, 80%, 1);
+        z-index: 4;
+    }
+}

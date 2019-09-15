@@ -133,6 +133,7 @@ li {
                         border-radius: 100%;
                         background: rgba(255, 255, 255, 0.3);
                         backdrop-filter: blur(5px);
+
                         .progress {
                             position: absolute;
                             top: 50%;
@@ -239,7 +240,7 @@ li {
     z-index: 2;
 
     circle {
-        stroke-width: 5px;
+        stroke-width: 4px;
         transform-origin: center;
 
         &.progress-background {
@@ -250,6 +251,101 @@ li {
         &.progress-bar {
             transform: scale(0.9) rotate(-90deg);
             stroke: #fff;
+        }
+    }
+}
+
+.ys-play-detail {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url(../imgs/1.jpeg) -130px 0 / cover no-repeat;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .ys-play-video {
+        position: absolute;
+        bottom: 40px;
+        z-index: 3;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 30px;
+        height: 110px;
+        width: 100%;
+
+        i {
+            font-weight: 500;
+            font-size: 32px;
+            color: #fff;
+        }
+
+        .ys-video-player {
+            position: relative;
+            display: inline-block;
+            width: 110px;
+            height: 110px;
+        }
+
+        .player-inner-2,
+        .player-inner-3,
+        .player-inner-4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .player-inner-2 {
+            width: 95px;
+            height: 95px;
+            border-radius: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .player-inner-3 {
+            width: 58px;
+            height: 58px;
+            border-radius: 100%;
+            background: #ffffff;
+        }
+
+        .player-inner-4 {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: linear-gradient(to right, #9a67bc, #7f81c5);
+        }
+    }
+}
+
+.ys-summary-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    width: 1200px;
+    height: 800px;
+    background-color: #e8e8f0;
+
+    img {
+        transform: scale(.5);
+        border-radius: 80px;
+
+        &:nth-child(2) {
+            position: relative;
+            left: -300px;
+            top: 70px;
         }
     }
 }
