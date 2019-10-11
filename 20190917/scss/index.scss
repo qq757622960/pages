@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ececec;
+}
+
+.ys-cont {
+    padding: 38px 28px;
+    margin: 50px auto;
+    width: 600px;
+    // min-height: 500px;
+    background: radial-gradient(circle at top left, transparent 20px, rgba(255, 255, 255, .9) 0) top left,
+        radial-gradient(circle at top right, transparent 20px, rgba(255, 255, 255, .9) 0) top right,
+        radial-gradient(circle at bottom right, transparent 20px, rgba(255, 255, 255, .9) 0) bottom right,
+        radial-gradient(circle at bottom left, transparent 20px, rgba(255, 255, 255, .9) 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+
+    .ys-book {
+        display: flex;
+        justify-content: space-between;
+
+        &-img {
+            width: 180px;
+            height: 230px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            padding-top: 15px;
+            display: flex;
+        }
+
+        &-sign {
+            padding-top: 47px;
+            padding-right: 10px;
+
+            span {
+                font-family: 'Give You Glory';
+                font-weight: 100;
+                font-size: 12px;
+                writing-mode: vertical-rl;
+                color: #999999;
+
+            }
+        }
+
+        &-name {
+            width: 30px;
+            writing-mode: vertical-rl;
+            font-weight: 300;
+            font-size: 24px;
+            letter-spacing: 4px;
+        }
+    }
+
+    .ys-book-cont {
+        padding-top: 50px;
+        h2 {
+            font-size: 18px;
+            font-weight: 200;
+        }
+        p {
+            padding-top: 20px;
+            line-height: 1.8;
+            text-align: justify;
+            font-weight: 16px;
+            font-weight: 300;
+        }
+    }
+}

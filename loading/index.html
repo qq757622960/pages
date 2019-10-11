@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @keyframes loading {
+            0% {
+                background-position: 3600% 0
+            }
+
+            to {
+                background-position: -1200% 0
+            }
+        }
+
+        .loading {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 5
+        }
+
+        .loading .loading-animation {
+            width: 95px;
+            height: 130px;
+            background-image: url(./load.png);
+            background-size: cover;
+            -webkit-animation: loading 2s steps(48) infinite;
+            animation: loading 2s steps(48) infinite
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-animation"></div>
+    </div>
+</body>
+</html>

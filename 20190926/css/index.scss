@@ -1,0 +1,45 @@
+@import './reset';
+
+
+// 高度百分之 60 边框
+.border70 {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 85%;
+        left: -0.1em;
+        right: -0.1em;
+        bottom: 0;
+        transition: top 200ms cubic-bezier(0, .8, .13, 1);
+        // background-color: #ffd6c6;
+        background-color: rgba(79, 192, 141, 0.5);
+    }
+
+    &:hover {
+        top: 0%;
+        text-decoration: none;
+    }
+}
+
+.ys-cont {
+    margin: 30px auto;
+    padding: 15px;
+    width: 1000px;
+    height: 1000px;
+    // background: url(../imgs/zhi.jpeg) 0 / cover no-repeat;
+
+    p {
+        color: #000000;
+        font-weight: 300;
+        text-align: justify;
+        font-size: 20px;
+        text-indent: 2em;
+        padding-bottom: 15px;
+        line-height: 1.8;
+    }
+}

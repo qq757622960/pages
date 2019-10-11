@@ -1,0 +1,102 @@
+/** 
+ * @Author: YISHI 
+ * @Date: 2019-09-18 14:26:52 
+ * @Desc: 基础组件 
+ */
+
+// 内容
+
+.ys-cont {
+    position: relative;
+    margin: 50px auto;
+    padding: 20px 25px;
+    width: 350px;
+    min-height: 650px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    background-color: #fbfbfb;
+}
+
+// 头部
+
+.ys-head {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        font-size: 20px;
+    }
+
+    .search {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        padding: 0 10px;
+        width: 133px;
+        height: 26px;
+        border: 1px solid #ebebeb;
+        border-radius: 12px;
+
+        input {
+            padding: 0 5px 0 5px;
+            width: 100px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        i {
+            color: #ebebeb;
+        }
+    }
+}
+
+// 底部 tabbar
+
+.ys-tabbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 78px;
+    background-color: #fff;
+    background: radial-gradient(circle at top left, transparent 15px, #fff 0) top left,
+        radial-gradient(circle at top right, transparent 15px, #fff 0) top right,
+        radial-gradient(circle at bottom right, transparent 0, #fff 0) bottom right,
+        radial-gradient(circle at bottom left, transparent 0, #fff 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+
+    &-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+
+            i {
+                color: #bcbcbc;
+                font-size: 18px;
+            }
+        }
+
+        &.active {
+            span {
+                background: linear-gradient(to right, #9a67bc, #7f81c5);
+
+                i {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

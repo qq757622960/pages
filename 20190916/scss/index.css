@@ -1,0 +1,9 @@
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.ys-cont { padding: 30px 0; margin: 50px auto; width: 800px; height: 800px; background-color: #fbfbfb; }
+
+.ys-dog-ear { margin: 20px auto; position: relative; width: 600px; background: linear-gradient(-150deg, transparent 1.5em, #ffffff 0); background-image: url(../imgs/13.jpeg); background-repeat: no-repeat; background-size: cover; padding: 32px; color: #000000; font: 16px/1.6 'Patrick Hand'; border-radius: 10px; -webkit-box-shadow: -8px 10px 4px -4px rgba(0, 0, 0, 0.2); box-shadow: -8px 10px 4px -4px rgba(0, 0, 0, 0.2); }
+.ys-dog-ear:before { content: ''; position: absolute; top: 0; right: 0; width: 1.73em; height: 3em; background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, transparent), color-stop(0, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.4))) 100% 0 no-repeat; background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.4)) 100% 0 no-repeat; -webkit-transform: translateY(-1.3em) rotate(-30deg); transform: translateY(-1.3em) rotate(-30deg); -webkit-transform-origin: bottom right; transform-origin: bottom right; border-bottom-left-radius: .5em; -webkit-box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.1); box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.1); }
+.ys-dog-ear h2 { font-weight: 400; font-size: 18px; }
+.ys-dog-ear p { line-height: 2; text-align: justify; padding-top: 20px; font-size: 14px; font-weight: 300; }
+.ys-dog-ear .ys-bgl { margin: 0 5px; padding: 0 2px; background: -webkit-gradient(linear, left top, right top, from(#fce4ed), to(#ffe8cc)); background: linear-gradient(to right, #fce4ed, #ffe8cc); }

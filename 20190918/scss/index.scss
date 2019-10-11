@@ -1,0 +1,24 @@
+@import './_reset';
+@import './_commponent';
+
+$avatar: 60px;
+
+body {
+    font-family: 'Montserrat';
+    background-color: #ffffff;
+}
+
+.ys-container {
+    position: relative;
+    margin: 40px auto;
+    width: 745px;
+    height: 849px;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+
+.content {
+    h2 {
+        font-size: 125%;
+        font-weight: 200;
+    }
+}

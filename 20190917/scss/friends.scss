@@ -1,0 +1,96 @@
+@import './_reset.scss';
+@import './_component.scss';
+
+
+.ys-cont {
+    .ys-friend {
+        &-media-list {
+            padding-top: 30px;
+
+            .ys-media {
+                position: relative;
+                padding: 0 10px 0 55px;
+                overflow: hidden;
+
+                &:hover {
+                    background-color: #fff;
+                    background: radial-gradient(circle at top left, transparent 15px, #ffffff 0) top left,
+                        radial-gradient(circle at top right, transparent 15px, #ffffff 0) top right,
+                        radial-gradient(circle at bottom right, transparent 15px, #ffffff 0) bottom right,
+                        radial-gradient(circle at bottom left, transparent 15px, #ffffff 0) bottom left;
+                    background-size: 50% 50%;
+                    background-repeat: no-repeat;
+
+                    i {
+                        color: #000000;
+                    }
+                }
+
+                .number {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    transform: translate(0, -50%);
+                    color: #bcbcbc;
+                    font-size: 16px;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    width: 240px;
+                    height: 90px;
+
+                }
+
+                &-object {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 8px;
+                    object-fit: cover;
+                }
+
+                &-body {
+                    flex: 1;
+                    padding-left: 18px;
+
+                    .name {
+                        margin-bottom: 6px;
+                        color: #111111;
+                        font-size: 14px;
+                    }
+
+                    .profession {
+                        color: #bcbcbc;
+                        font-size: 12px;
+                    }
+                }
+
+                .icon {
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    color: #bcbcbc;
+                }
+            }
+        }
+    }
+}
+
+.ys-tab {
+    &-title {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        li {
+            padding-right: 25px;
+            color: #b1b1b1;
+            font-size: 14px;
+
+            &.ys-this {
+                color: #191919;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'Varela Round'}
+li,ul{list-style:none}
+a{color:#000;text-decoration:none}
+.ys-cont{position:relative;margin:50px auto;padding:20px 25px;width:350px;min-height:650px;-webkit-box-shadow:0 2px 12px 0 rgba(0,0,0,.1);box-shadow:0 2px 12px 0 rgba(0,0,0,.1);background-color:#fbfbfb}
+.ys-head{height:60px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.ys-head .title{font-size:20px}
+.ys-head .search{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;padding:0 10px;width:133px;height:26px;border:1px solid #ebebeb;border-radius:12px}
+.ys-head .search input{padding:0 5px 0 5px;width:100px;border:none;outline:0;font-size:14px}
+.ys-head .search i{color:#ebebeb}
+.ys-tabbar{position:absolute;bottom:0;left:0;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;height:78px;background-color:#fff;background:radial-gradient(circle at top left,transparent 15px,#fff 0) top left,radial-gradient(circle at top right,transparent 15px,#fff 0) top right,radial-gradient(circle at bottom right,transparent 0,#fff 0) bottom right,radial-gradient(circle at bottom left,transparent 0,#fff 0) bottom left;background-size:50% 50%;background-repeat:no-repeat}
+.ys-tabbar-item{-webkit-box-flex:1;-ms-flex:1;flex:1;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.ys-tabbar-item span{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:34px;height:34px;border-radius:10px}
+.ys-tabbar-item span i{color:#bcbcbc;font-size:18px}
+.ys-tabbar-item.active span{background:-webkit-gradient(linear,left top,right top,from(#9a67bc),to(#7f81c5));background:linear-gradient(to right,#9a67bc,#7f81c5)}
+.ys-tabbar-item.active span i{color:#fff}
+body{font-family:Montserrat;background-color:#fff}
+.ys-container{position:relative;margin:40px auto;width:745px;height:849px;-webkit-box-shadow:0 2px 12px 0 rgba(0,0,0,.1);box-shadow:0 2px 12px 0 rgba(0,0,0,.1)}
+.content h2{font-size:125%;font-weight:200}
